@@ -1,8 +1,7 @@
 # fraudscan
 Used to scan video files for malicious content based on keywords 
 
-Install
+Install Requirements 
 
-pip install opencv-python
-
-apt-get install ffmpeg libsm6 libxext6 tesseract-ocr
+- pip install opencv-python
+- apt-get install ffmpeg libsm6 libxext6 tesseract-ocr
