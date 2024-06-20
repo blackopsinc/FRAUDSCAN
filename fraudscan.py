@@ -37,7 +37,7 @@ def extract_frames(filepath, file, interval):
         if not ret:
             break
 
-        if frame_count > 1200: # 10 Minutes every 30 seconds snapshot
+        if frame_count > 1200: # 10 Minutes (hard stop) every 30 seconds snapshot
            cap.release()
            break
 
@@ -62,7 +62,7 @@ def extract_frames(filepath, file, interval):
                             'games':['roblox','steam','minecraf','now.gg','fortnite'],
                             'crypto':['miner','crypto'],
                             'hacking':['masscan'],
-                            'proxies':['proxy','ocks5','browserling','homeworkistrash','vpn'],
+                            'proxies':['proxy','socks5','browserling','homeworkistrash','vpn'],
                             'software':['downloads','setup','.exe','.zip','github','anonfiles'],
                             'accounts':['password','inbox'],
                             'illegal':['torrent','checker']
@@ -97,7 +97,7 @@ def list_files(directory):
             print(path)
             executor = ThreadPoolExecutor(max_workers=4)
             executor.submit(extract_frames,path,file,30)
-            time.sleep(1.5) # prevents runway threads tune 
+            time.sleep(1.1) # prevents runway threads tune 
 
 
 list_files("videos/") # Change this to location of video files in mp4, avi, mkv formats
