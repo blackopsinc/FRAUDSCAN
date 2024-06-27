@@ -52,7 +52,7 @@ def extract_frames(filepath, file, interval):
                 data = pytesseract.image_to_string(temp_frame, config='-c tessedit_char_whitelist=abcdefghijklmnopqrstuvwxyz01234567890.://@%?=&,;_- ') # Tune OCR 
                 
                 #
-                # ML model goes here basic
+                # ML model goes here. Basic keywords as a PoC.
                 #
                 
                 keywords = {
